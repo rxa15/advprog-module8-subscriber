@@ -18,6 +18,10 @@ AMQP (Advanced Message Queuing Protocol) is an open standard protocol that enabl
 ![Simulation Slow Subscriber](image/simulation-slow-subscriber.png)
 The total number of queue in my machine is around 25. The number of messages queued in the message broker increases as the delay extends because the Publisher sends messages faster than the Subscriber can receive them.
 
+## Running At Least Three Subscribers
+![Running At Least Three Subscribers](image/Running-three-subscriber.png)
+If multiple subscribers are run, data transmission becomes much faster. This setup results in no queued messages in the message broker. It occurs because the message broker distributes the data received from the Publisher across all connected subscribers. By merely altering the message broker configuration or the number of active subscribers, without modifying the program code, we can achieve different outcomes. This flexibility is characteristic of an event-driven architecture.
+
 ## Reference
 
 https://www.amqp.org/about/what
